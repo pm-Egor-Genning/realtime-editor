@@ -1,0 +1,14 @@
+language: node_js
+node_js: '10'
+cache: npm
+notifications:
+  email: false
+install: npm install
+sudo: false
+branches:
+  only:
+    - master
+script:
+  - npm run lint
+  - npm run test
+  - npm run dev:build
